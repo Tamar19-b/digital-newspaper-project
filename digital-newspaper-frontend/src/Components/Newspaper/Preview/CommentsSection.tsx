@@ -22,7 +22,6 @@ const CommentsSection: React.FC<Props> = ({ articleId }) => {
   const [newComment, setNewComment] = useState('');
   const [sending, setSending] = useState(false);
   const [showComments, setShowComments] = useState(false);
-
   const currentUser = useSelector((state: any) => state.user.currentUser);
   const userId = currentUser?.id;
   const userName = currentUser?.name || localStorage.getItem('userName') || '';

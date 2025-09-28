@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 interface MoodCameraProps {
-  maxFrames?: number; // כמה תמונות לצלם
-  onShareComment?: (text: string) => void; // פונקציה לשיתוף התגובה
+  maxFrames?: number; 
+  onShareComment?: (text: string) => void; 
 }
 
 interface EmojiInfo {
@@ -31,10 +31,10 @@ const MoodCamera: React.FC<MoodCameraProps> = ({ maxFrames = 10, onShareComment 
   const [scores, setScores] = useState<Record<string, number>>(() =>
     Object.keys(emojiMap).reduce((acc, key) => ({ ...acc, [key]: 0 }), {})
   );
-  const [showEmojis, setShowEmojis] = useState(false); // האם להראות את השורה של האימוג'ים
-  const [showShare, setShowShare] = useState(false); // האם להראות שורת השיתוף
+  const [showEmojis, setShowEmojis] = useState(false); 
+  const [showShare, setShowShare] = useState(false); 
 
-  // פונקציה שמעלה את הניקוד בהדרגה
+  // אנימציית ניקוד
   const animateScore = (key: string, finalScore: number) => {
     const step = () => {
       setScores(prev => {
@@ -92,7 +92,7 @@ const MoodCamera: React.FC<MoodCameraProps> = ({ maxFrames = 10, onShareComment 
         animateScore(emojiKey, counts[emojiKey]);
       }
 
-      // בחר את האימוג'י עם הניקוד הגבוה ביותר
+      // האימוגי עם הניקוד הגבוהה
       let maxScore = -1;
       let finalEmoji = "";
       for (const key in counts) {
@@ -115,7 +115,7 @@ const MoodCamera: React.FC<MoodCameraProps> = ({ maxFrames = 10, onShareComment 
   const handleShareClick = () => {
     if (onShareComment) {
       onShareComment(`היי התגובה שלי היא ${detectedEmoji}`);
-      setShowShare(false); // אפשר להסתיר את השורה לאחר השיתוף
+      setShowShare(false);
     }
   };
 
@@ -149,7 +149,7 @@ const MoodCamera: React.FC<MoodCameraProps> = ({ maxFrames = 10, onShareComment 
             boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
             transition: 'transform 0.2s',
           }}
-          title={loading ? "⏳ מצלמים..." : "פתח מצלמה"}
+          title={loading ? " מצלמים..." : "פתח מצלמה"}
         >
           <i className={`bi ${loading ? 'bi-hourglass-split' : 'bi-camera'}`}></i>
         </button>

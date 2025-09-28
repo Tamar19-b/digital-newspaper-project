@@ -43,11 +43,11 @@ const CardA: React.FC<Props> = ({ article }) => {
     }
   };
 
-  // הכנת article ל-Preview
+
   const articleForPreview = {
     ...article,
     imge: article.imge ?? '',
-    propilReporter: article.propilReporter || '', // תמיד string
+    propilReporter: article.propilReporter || '',
     reporterName: article.reporterName || 'כתב לא ידוע',
   };
 

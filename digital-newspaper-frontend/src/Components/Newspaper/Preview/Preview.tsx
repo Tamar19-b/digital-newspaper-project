@@ -106,7 +106,7 @@ const Preview: React.FC<Props> = ({ article, onClose }) => {
           }
         }} />
 
-        {/* קומפוננטה נפרדת לתגובות */}
+      
         <CommentsSection articleId={article.idArticle!} />
       </div>
     </div>

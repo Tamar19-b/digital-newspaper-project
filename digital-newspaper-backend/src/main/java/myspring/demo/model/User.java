@@ -1,5 +1,4 @@
 package myspring.demo.model;
-
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -25,7 +24,7 @@ public class User {
     private String image;
 
     @Column(nullable = true, length = 512)
-    private String token; // חדש - טוקן למשתמש
+    private String token;
 
     public User orElseThrow(Object object) {
         // TODO Auto-generated method stub

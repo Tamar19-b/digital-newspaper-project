@@ -32,10 +32,9 @@ const HeaderN: React.FC<HeaderNProps> = ({ searchTerm, setSearchTerm, user, setU
   const location = useLocation();
   const [showPropil, setShowPropil] = useState(false);
 
-  // מחלץ את הסקשן מהנתיב
+
   const currentSection = decodeURIComponent(location.pathname.split('/newspaper/')[1] || '');
 
-  // שליפת פרטי המשתמש מה-localStorage
   const userName = user?.name || localStorage.getItem('userName') || 'משתמש';
   const userImage = user?.avatar || localStorage.getItem('userImage') || '';
   const userToken = user?.token || localStorage.getItem('userToken') || '';

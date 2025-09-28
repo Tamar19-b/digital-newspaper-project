@@ -1,4 +1,3 @@
-// LastArticle.tsx
 import React from 'react';
 import './LastArticle.css';
 import type { Article } from '../../ReporterHome/index'

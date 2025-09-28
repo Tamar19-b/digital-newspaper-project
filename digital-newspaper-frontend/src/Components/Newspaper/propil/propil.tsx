@@ -1,4 +1,3 @@
-
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -23,8 +22,7 @@ const Propil: React.FC<PropilProps> = ({ user, setUser, onClose }) => {
     onClose();
     navigate('/log-in');
   };
-  // שליפת ערכי ברירת מחדל מה-localStorage אם לא הועברו
-  // תמיד טען מה-localStorage כדי שהערך יהיה עדכני
+
   const [name, setName] = useState(localStorage.getItem('userName') || user.name || '');
   const [avatar, setAvatar] = useState(localStorage.getItem('userImage') || user.avatar || '');
   const [uploading, setUploading] = useState(false);
@@ -155,7 +153,7 @@ const Propil: React.FC<PropilProps> = ({ user, setUser, onClose }) => {
           </button>
         </form>
 
-        {/* 🔥 תצוגת סל המועדפים */}
+        {/*  תצוגת סל המועדפים */}
         <div className="favorites-section">
           <h3 style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <i className="bi bi-heart-fill" style={{ color: '#ff0077', fontSize: '1.1rem' }}></i>

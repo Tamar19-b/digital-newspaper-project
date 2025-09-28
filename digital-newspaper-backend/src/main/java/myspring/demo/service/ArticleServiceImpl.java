@@ -11,7 +11,7 @@ import myspring.demo.model.ArticleStatus;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {
-    // יודע להזריק את המופע המתאים לכאן //IoC //באופן זה
+
     @Autowired
     private ArticleRepository rep;
 
@@ -60,8 +60,7 @@ public class ArticleServiceImpl implements ArticleService {
     public List<Article> getBySectionAndStatus(int sectionId, ArticleStatus status) {
         return rep.findBySection_IdSectionAndStatus(sectionId, status);
     }
-    
-    // 🆕 פונקציות לייק/דיסלייק וצפיות
+
     @Override
     public void incrementLike(int idArticle) {
         Article a = getByCodeArticle(idArticle);

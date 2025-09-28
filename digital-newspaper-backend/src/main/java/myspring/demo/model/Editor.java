@@ -10,21 +10,21 @@ import java.util.List;
 public class Editor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idEditor;// מפתח ראשי של העורך
+    private int idEditor;
 
     @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
-    private String password;// סיסמה של העורך
+    private String password;
 
     @Column(nullable = false, unique = true)
-    private String email;// דוא"ל ייחודי של העורך
+    private String email;
 
     @Lob
     @Column(nullable = true)
     private String propil;
 
     @OneToMany(mappedBy = "editor")
-    private List<Article> pendingArticles; // מזהי כתבות שממתינות לאישור
+    private List<Article> pendingArticles; 
 }

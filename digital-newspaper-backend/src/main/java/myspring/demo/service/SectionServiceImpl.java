@@ -9,7 +9,7 @@ import myspring.demo.dal.SectionRepository;
 import myspring.demo.model.Section;
 @Service
 public class SectionServiceImpl implements SectionService {
-    //יודע להזריק את המופע המתאים לכאן //IoC //באופן זה 
+
     @Autowired
     private SectionRepository rep;
 

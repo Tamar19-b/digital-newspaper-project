@@ -12,7 +12,7 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	//ידוע ליצור אובייקט מתאים שיוחזק אצלו ויוזרק בהתאם לצורך //IoC //באופן זה ה
+
 	@Bean
 	public ModelMapper getMapper()
 	{

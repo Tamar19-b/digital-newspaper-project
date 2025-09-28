@@ -63,7 +63,7 @@ const ArticleCard: React.FC<Props> = ({
   return (
     <div
       className="article-card" style={{ opacity: mode === 'reporter' && article.status === 'SUBMITTED' ? 0.5 : 1 }}>
-      {/* 🖼️ תמונה בראש */}
+      {/*  תמונה בראש */}
       <div className="article-image-container">
         {article.imge ? (
           <img src={article.imge} alt="תמונה מתוך הכתבה" className="article-image" />
@@ -72,10 +72,10 @@ const ArticleCard: React.FC<Props> = ({
         )}
       </div>
 
-      {/* 📦 תוכן הכרטיס */}
+      {/*  תוכן הכרטיס */}
       <div className="article-content">
 
-        {/* 🔝 שורה עליונה: סטטוס ולוגו + אייקון הערות */}
+
         <div className="article-meta-top">
           <span className="status">
             מצב: {
@@ -92,15 +92,15 @@ const ArticleCard: React.FC<Props> = ({
           </div>
         </div>
 
-        {/* 📰 כותרת */}
+        {/*  כותרת */}
         <h3>{article.title}</h3>
 
-        {/* ✏️ תמצית הטקסט */}
+        {/*  תמצית הטקסט */}
         <p style={{ wordBreak: 'break-word', overflowWrap: 'break-word', whiteSpace: 'normal', maxWidth: '100%' }}>
           {article.text.slice(0, 80)}...
         </p>
 
-        {/* 🎯 כפתורים */}
+        {/*  כפתורים */}
         <div className="actions">
           <Button className="action-btn bg-success-hover" onClick={onEdit}>
             <PencilFill className="me-2" />
@@ -130,7 +130,7 @@ const ArticleCard: React.FC<Props> = ({
           )}
         </div>
 
-        {/* 📅 תאריך ואייקון הערות בשורה אחת */}
+        {/*  תאריך ואייקון הערות בשורה אחת */}
         {lastModifiedDate && (
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 8 }}>
             <div className="date" style={{ display: 'flex', alignItems: 'center', gap: 6 }}>

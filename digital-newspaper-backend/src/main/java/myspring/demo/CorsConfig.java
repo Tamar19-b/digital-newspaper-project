@@ -13,8 +13,8 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // מאפשר כל כתובת
-                        .allowedOrigins("http://localhost:3001") // או כל פורט שאתה צריך
+                registry.addMapping("/**") 
+                        .allowedOrigins("http://localhost:3001") 
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*");
             }

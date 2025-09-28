@@ -8,7 +8,7 @@ interface Props {
   onEdit: (a: Article) => void;
   onApprove?: (a: Article) => void;
   onReject?: (a: Article) => void;
-  onView?: (a: Article) => void; // ✅ הוספת onView
+  onView?: (a: Article) => void; //  הוספת onView
   onDelete?: (id?: number) => void;
   onSend?: (a: Article) => void;
   handleCreateNew?: () => void;

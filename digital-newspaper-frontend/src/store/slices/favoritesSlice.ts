@@ -1,10 +1,6 @@
 // src/redux/favoritesSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-
-
-
-
 export interface Article {
   id: number;
   title: string;

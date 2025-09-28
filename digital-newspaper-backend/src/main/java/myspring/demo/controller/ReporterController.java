@@ -1,14 +1,11 @@
 package myspring.demo.controller;
-
 import java.lang.reflect.Type;
 import java.util.List;
-
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import myspring.demo.dto.ReporterDTO;
 import myspring.demo.model.Reporter;
 import myspring.demo.service.ReporterService;
@@ -56,7 +53,6 @@ public class ReporterController {
         return mapper.map(reporter, ReporterDTO.class);
     }
 
-    // ✅ נקודת קצה חדשה: העלאת תמונה
     @PostMapping("/uploadProfileImage/{id}")
     public void uploadProfileImage(@PathVariable int id, @RequestParam("file") MultipartFile file) {
         rService.saveProfileImage(id, file);

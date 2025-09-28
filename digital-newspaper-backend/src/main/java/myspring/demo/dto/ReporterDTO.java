@@ -7,11 +7,11 @@ import lombok.Data;
 @Data
 public class ReporterDTO {
     private String name;
-    private int idReporter; //מזהה כתב
-    private String email; //אימייל כתב
-    private String password; //סיסמה כתב
+    private int idReporter; 
+    private String email;
+    private String password; 
     private String profileImageName;
     private String propil;
-    private SectionDTO section;// סוג המדור של הכתב
-    private List<ArticleDTO> articles;// רשימת המאמרים של הכתב
+    private SectionDTO section;
+    private List<ArticleDTO> articles;
  }

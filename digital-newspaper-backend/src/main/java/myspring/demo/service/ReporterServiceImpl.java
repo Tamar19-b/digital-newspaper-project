@@ -17,18 +17,19 @@ public class ReporterServiceImpl implements ReporterService {
 
     private final String uploadDir = "D:/demo/uploads/images/";
 
-
     @Override
     public void addReporter(Reporter a) {
         if (rep.existsById(a.getIdReporter()))
-            throw new RuntimeException("Cannot add Reporter with the code " + a.getIdReporter() + " because it already exists.");
+            throw new RuntimeException(
+                    "Cannot add Reporter with the code " + a.getIdReporter() + " because it already exists.");
         rep.save(a);
     }
 
     @Override
     public void updateReporter(Reporter a) {
         if (!rep.existsById(a.getIdReporter()))
-            throw new RuntimeException("Cannot update Reporter with the code " + a.getIdReporter() + " because it does not exist.");
+            throw new RuntimeException(
+                    "Cannot update Reporter with the code " + a.getIdReporter() + " because it does not exist.");
         rep.save(a);
     }
 
@@ -53,29 +54,28 @@ public class ReporterServiceImpl implements ReporterService {
                 .orElseThrow(() -> new RuntimeException("Reporter with email " + email + " not found."));
     }
 
-    // ✅ שמירת תמונת פרופיל
-   @Override
-public void saveProfileImage(int reporterId, MultipartFile file) {
-    System.out.println("▶ נכנסתי לפונקציה של שמירת תמונה");
-    Reporter reporter = rep.findById(reporterId)
-            .orElseThrow(() -> new RuntimeException("📛 Reporter not found (id = " + reporterId + ")"));
+    @Override
+    public void saveProfileImage(int reporterId, MultipartFile file) {
+        System.out.println("▶ נכנסתי לפונקציה של שמירת תמונה");
+        Reporter reporter = rep.findById(reporterId)
+                .orElseThrow(() -> new RuntimeException(" Reporter not found (id = " + reporterId + ")"));
 
-    try {
-        Files.createDirectories(Paths.get(uploadDir));
-        String fileName = reporterId + "_" + file.getOriginalFilename();
-        Path filePath = Paths.get(uploadDir + fileName);
-        Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+        try {
+            Files.createDirectories(Paths.get(uploadDir));
+            String fileName = reporterId + "_" + file.getOriginalFilename();
+            Path filePath = Paths.get(uploadDir + fileName);
+            Files.copy(file.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
 
-        System.out.println("📁 נשמר קובץ: " + filePath);
+            System.out.println(" נשמר קובץ: " + filePath);
 
-        reporter.setProfileImageName(fileName);
-        rep.save(reporter);
+            reporter.setProfileImageName(fileName);
+            rep.save(reporter);
 
-        System.out.println("✅ שמרתי את השם למסד נתונים");
-    } catch (IOException e) {
-        System.out.println("❌ תקלה בשמירת הקובץ: " + e.getMessage());
-        throw new RuntimeException("Failed to save image", e);
+            System.out.println(" שמרתי את השם למסד נתונים");
+        } catch (IOException e) {
+            System.out.println(" תקלה בשמירת הקובץ: " + e.getMessage());
+            throw new RuntimeException("Failed to save image", e);
+        }
     }
-}
 
 }

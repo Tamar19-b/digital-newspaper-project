@@ -9,5 +9,5 @@ public class UserDTO {
     private String email;
     private String password;
     private String image;
-    private String token; // חדש
+    private String token;
 }

@@ -1,5 +1,4 @@
 package myspring.demo.dto;
-
 import java.time.LocalDateTime;
 import lombok.Data;
 
@@ -24,13 +23,8 @@ public class ArticleDTO {
     private int reporterId;
     private String reporterName;
     private String editorNotes;
-
-    // 🆕 שדות חדשים
     private int likeCount;
     private int dislikeCount;
     private int views;
-
-    
-    // 🆕 שדה חדש – פרופיל הכתב
     private String reporterProfile;
 }

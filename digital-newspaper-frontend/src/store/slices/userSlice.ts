@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// מנסה לטעון את המשתמש מה-localStorage אם יש
+
 const storedUser = localStorage.getItem('currentUser');
 const initialUser = storedUser ? JSON.parse(storedUser) : null;
 

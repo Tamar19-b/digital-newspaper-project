@@ -17,11 +17,11 @@ public class ArticleComment {
 
     private LocalDateTime createdAt;
 
-    @Column(nullable = false)//חדש
+    @Column(nullable = false)
     private String name;
     
-    @Column(nullable = true)//חדש
-    private String image; // URL לתמונה
+    @Column(nullable = true)
+    private String image; 
 
     @ManyToOne
     @JoinColumn(name = "user_id")

@@ -51,7 +51,6 @@ public class Article {
     @Column(nullable = true, columnDefinition = "TEXT")
     private String editorNotes;
 
-    // 🆕 שדות חדשים
     @Column(nullable = false)
     private int likeCount = 0;
 
@@ -61,7 +60,6 @@ public class Article {
     @Column(nullable = false)
     private int views = 0;
 
-        // 🆕 שדה חדש – פרופיל הכתב
     @Lob
     @Column(nullable = true)
     private String reporterProfile;

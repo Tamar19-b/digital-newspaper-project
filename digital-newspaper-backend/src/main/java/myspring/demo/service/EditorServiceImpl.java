@@ -10,7 +10,7 @@ import myspring.demo.model.Editor;
 
 @Service
 public class EditorServiceImpl implements EditorService{
-    //יודע להזריק את המופע המתאים לכאן //IoC //באופן זה 
+
     @Autowired
     private EditorRepository rep;
 

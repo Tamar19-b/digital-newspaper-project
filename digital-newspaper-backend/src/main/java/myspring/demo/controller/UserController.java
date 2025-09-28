@@ -1,12 +1,9 @@
 package myspring.demo.controller;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.web.bind.annotation.*;
-
 import myspring.demo.model.User;
-
 import myspring.demo.dto.UserDTO;
 import myspring.demo.service.UserService;
 import java.lang.reflect.Type;

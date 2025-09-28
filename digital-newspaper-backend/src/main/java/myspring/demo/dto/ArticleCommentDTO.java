@@ -10,6 +10,6 @@ public class ArticleCommentDTO {
     private LocalDateTime createdAt;
     private int userId;
     private int articleId;
-    private String name;//חדש
-    private String image;//חדש    jdbc:h2:file:~/test
+    private String name;
+    private String image;
 }

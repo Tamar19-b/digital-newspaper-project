@@ -17,7 +17,7 @@ const NewspaperPage: React.FC = () => {
   const [articles, setArticles] = useState<ExtArticle[]>([]);
   const [error, setError] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-  const [page, setPage] = useState(0); // page מייצג כמה "דפים" של 20 מוצגים
+  const [page, setPage] = useState(0); // כמה דפים יוצגו
   const [loading, setLoading] = useState(false);
   // טען משתמש מה-localStorage כברירת מחדל
   const [user, setUser] = useState(() => ({

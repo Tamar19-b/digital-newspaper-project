@@ -51,7 +51,6 @@ const LoginComponent = () => {
             return;
           }
 
-          // שמירה ב-Redux ו-localStorage, כולל תמונה אם קיימת
           const currentUser = { id: user.id, name: user.name, email: user.email, image: user.image , token: user.token };
           dispatch(login(currentUser));
 
@@ -73,7 +72,7 @@ const LoginComponent = () => {
           return;
         }
 
-        // שמור פרטי כתב ב-localStorage
+
         localStorage.setItem('reporterId', String(reporter.id));
         localStorage.setItem('reporterName', reporter.name);
         localStorage.setItem('reporterEmail', reporter.email);

@@ -15,7 +15,7 @@
 //     public void migrate() {
 
     
-//         // 🆕 הוספת שדה reporter_profile
+
 //         try {
 //             jdbcTemplate.execute("ALTER TABLE article ADD COLUMN reporter_profile TEXT");
 //         } catch (Exception e) {}

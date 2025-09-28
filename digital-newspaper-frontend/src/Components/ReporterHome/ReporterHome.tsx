@@ -151,15 +151,15 @@ const ReporterHome = () => {
 
 const handleSave = async (updated: Article) => {
   try {
-    console.log("📤 התחלת שמירה של כתבה", updated);
+    console.log(" התחלת שמירה של כתבה", updated);
 
     const url = isNewArticle
       ? 'http://localhost:8080/Articles/add'
       : `http://localhost:8080/Articles/update/${updated.idArticle}`;
     const method = isNewArticle ? 'POST' : 'PUT';
 
-    console.log(`🔗 URL: ${url}`);
-    console.log(`🔧 METHOD: ${method}`);
+    console.log(` URL: ${url}`);
+    console.log(` METHOD: ${method}`);
 
     const now = new Date().toISOString();
 
@@ -171,7 +171,7 @@ const handleSave = async (updated: Article) => {
       reporterId: updated.reporterId,
     };
 
-    console.log("📦 Payload שנשלח לשרת:", updatedPayload);
+    console.log(" Payload שנשלח לשרת:", updatedPayload);
 
     const res = await fetch(url, {
       method,
@@ -179,23 +179,23 @@ const handleSave = async (updated: Article) => {
       body: JSON.stringify(updatedPayload),
     });
 
-    console.log(`📥 תגובת שרת: ${res.status} ${res.statusText}`);
+    console.log(` תגובת שרת: ${res.status} ${res.statusText}`);
 
     if (!res.ok) {
       const errText = await res.text();
-      console.error("❌ שגיאת שרת:", errText);
+      console.error(" שגיאת שרת:", errText);
       throw new Error("Server response not OK");
     }
 
     if (isNewArticle) {
       const newArticle = await res.json();
-      console.log("✅ כתבה חדשה שנוצרה בהצלחה:", newArticle);
+      console.log(" כתבה חדשה שנוצרה בהצלחה:", newArticle);
 
       setReporter((prev) =>
         prev ? { ...prev, articles: [newArticle, ...prev.articles] } : prev
       );
     } else {
-      console.log("✏️ עדכון כתבה קיים");
+      console.log(" עדכון כתבה קיים");
 
       setReporter((prev) =>
         prev
@@ -211,11 +211,11 @@ const handleSave = async (updated: Article) => {
 
     setSelectedArticle(null);
     setIsNewArticle(false);
-    console.log("✅ שמירה הסתיימה בהצלחה");
+    console.log(" שמירה הסתיימה בהצלחה");
 
   } catch (err) {
    
-    console.error("🛑 שגיאה כללית:", err);
+    console.error(" שגיאה כללית:", err);
   }
 };
 
@@ -260,7 +260,7 @@ const handleSave = async (updated: Article) => {
     ))
   ) || [];
 
-  // פונקציה שמקצרת מספרים כמו ביוטיוב
+  // פונקציה שמקצרת מספרים כמו 
 function formatNumber(num: number): string {
   if (num >= 1_000_000_000) {
     return (num / 1_000_000_000).toFixed(1).replace(/\.0$/, '') + 'T'; // טריליון
@@ -347,33 +347,7 @@ function formatNumber(num: number): string {
         }
       />
 
-           {/* Section Filter
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            <button
-              onClick={() => setSelectedSection('all')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                selectedSection === 'all'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-              }`}
-            >
-              כל המדורים
-            </button>
-            {(Object.keys(SECTION_NAMES) as ArticleSection[]).map((section) => (
-              <button
-                key={section}
-                onClick={() => setSelectedSection(section)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border ${
-                  selectedSection === section
-                    ? SECTION_COLORS[section].replace('bg-', 'bg-').replace('text-', 'text-').replace('border-', 'border-')
-                    : 'bg-white text-gray-700 border-gray-300 hover:border-gray-400'
-                }`}
-              >
-                {SECTION_NAMES[section]}
-              </button>
-            ))}
-          </div> */}
-   
+        
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
        

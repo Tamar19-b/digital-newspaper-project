@@ -36,7 +36,7 @@ const EditorHome = () => {
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [placeholder, setPlaceholder] = useState('');
-  // ✅ שליפת נתונים עם סינון לפי סטטוס SUBMITTED
+  
   const fetchEditorData = async () => {
     try {
       if (!email) throw new Error('Email missing');
@@ -93,15 +93,10 @@ const EditorHome = () => {
     typeLoop();
     return () => clearTimeout(timeout);
   }, []);
-  // ✅ polling כל 5 שניות (5000 מילי־שניות)
+
   useEffect(() => {
     fetchEditorData(); // שליפה ראשונית
 
-    // const interval = setInterval(() => {
-    //   fetchEditorData();
-    // }, 5000);
-
-    // return () => clearInterval(interval); // ניקוי הטיימר ברגע שהקומפוננטה נהרסת
   }, [email]);
 
 
