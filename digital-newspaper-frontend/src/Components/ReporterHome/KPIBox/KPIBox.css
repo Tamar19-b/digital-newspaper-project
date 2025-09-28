@@ -1,0 +1,150 @@
+@import '../ReporterHome.css';
+
+/* FilterBar styles (משמש כחלק מה-KPIBox) */
+.filter-bar-box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 18px 24px;
+  margin: 30px 40px 10px 40px;
+  max-width: 100%;
+  width: auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  position: relative;
+  top: 0;
+  direction: rtl;
+}
+.filter-bar-box select,
+.filter-bar-box button {
+  min-width: 140px;
+  max-width: 180px;
+  flex: 0 0 160px;
+  border: 1.5px solid #e4e8f0;
+  margin-top: 100px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f7f9fc;
+  color: #212529;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  margin: 0;
+  padding: 0 18px;
+  direction: rtl;
+  appearance: none;
+  display: flex;
+  align-items: center;
+}
+.filter-bar-box input[type="text"],
+.filter-bar-box input[type="search"] {
+  flex: 1 1 0%;
+  min-width: 0;
+  max-width: 100%;
+  border-radius: 12px;
+  background: #f7f9fc;
+  border: 1.5px solid #e4e8f0;
+  color: #212529;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  min-width: 120px;
+  height: 44px;
+  margin: 0;
+  direction: rtl;
+}
+.search-input-wrapper {
+  position: relative;
+  flex: 1 1 0%;
+  width: 100%;
+  display: flex;
+}
+.search-input-wrapper input[type="search"] {
+  flex: 1 1 0%;
+  min-width: 0;
+  max-width: 100%;
+  border-radius: 12px;
+  background: #f7f9fc;
+  border: 1.5px solid #e4e8f0;
+  color: #212529;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  height: 44px;
+  margin: 0;
+  padding: 0 18px;
+  direction: rtl;
+}
+.search-input-wrapper svg {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+
+/* KPIBox styles */
+.kpi-container {
+  display: flex;
+  gap: 20px;
+  margin: 30px 40px 10px;
+  flex-wrap: wrap;
+}
+.kpi-box {
+  flex: 1;
+  min-width: 180px;
+  padding: 20px;
+  border-radius: 12px;
+  color: rgb(173, 20, 20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+.kpi-box .kpi-icon {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.kpi-box .kpi-value {
+  font-size: 22px;
+  font-weight: bold;
+}
+.kpi-box .kpi-label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+.kpi-box.blue .kpi-icon,
+.kpi-box.blue .kpi-value {
+  color: #0e63d2;
+}
+.kpi-box.green .kpi-icon,
+.kpi-box.green .kpi-value {
+  color: #06c51f;
+}
+.kpi-box.orange .kpi-icon,
+.kpi-box.orange .kpi-value {
+  color: #ed9c1a;
+}
+.kpi-box.red .kpi-icon,
+.kpi-box.red .kpi-value {
+  color: #f11616;
+}
+.label-blue { color: #0e63d2; }
+.label-green { color: #06c51f; }
+.label-orange { color: #ed9c1a; }
+.label-red { color: #f11616; }
+.kpi-value {
+  font-size: 22px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}

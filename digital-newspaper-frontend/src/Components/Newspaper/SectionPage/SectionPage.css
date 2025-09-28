@@ -1,0 +1,22 @@
+.section-page {
+  min-height: 100vh;
+  direction: rtl;
+  font-family: 'Segoe UI', sans-serif;
+  padding-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin: 2rem 3rem 1rem 0;
+  text-align: right;
+}
+
+.no-articles-msg {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666666;
+  margin-top: 2rem;
+ 
+}

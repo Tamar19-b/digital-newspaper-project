@@ -1,0 +1,56 @@
+.last-article-container {
+  position: relative;
+  width: 100%;
+  height: 30vh; /* 30% מהגובה של הדף */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 4px solid #ff7000;
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35; /* שקיפות לתמונה */
+  z-index: 1;
+  filter: brightness(80%);
+}
+
+.last-article-content {
+  position: relative;
+  z-index: 2;
+  color: #002c70;
+  text-align: center;
+  max-width: 90%;
+}
+
+.last-article-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #002c70;
+}
+
+.last-article-snippet {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.read-more-button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background-color: #ff7000;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: #e45d00;
+}

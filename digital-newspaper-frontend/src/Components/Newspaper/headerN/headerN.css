@@ -1,0 +1,143 @@
+.newspaper-header {
+  background-image: url('../../../assets/bac1.png'); /* הרקע שלך */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  direction: rtl; /* יישור לימין */
+}
+
+.sections-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.section-icon {
+  width: 8vh; /* הקטנה */
+  height: 8vh; /* הקטנה */
+  border-radius: 8px;
+  padding: 4px;
+  transition: transform 0.2s, border 0.2s;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.section-icon:hover {
+  transform: scale(1.1);
+}
+
+/* הדגשת מדור נבחר */
+.active-section {
+  border: 4px solid #ff7000;
+  border-radius: 50%;
+}
+
+.search-box {
+  flex: 1;
+  max-width: 450px; /* הגדלה נוספת */
+  margin: 0 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  padding: 0.6rem 0.9rem; /* הקטנה */
+  border-radius: 18px;
+  border: none;
+  width: 100%;
+  max-width: 350px; /* הגדלה נוספת */
+  font-size: 0.65rem; /* הקטנה */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.18);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* מציין שניתן ללחץ */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 1rem; /* קרוב יותר לפרופיל */
+}
+
+.logo-container:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(255, 112, 0, 0.7); /* צל כתום בהיר */
+  border-radius: 10px; /* כדי שהצל יראה טוב */
+}
+
+.logo-img {
+  height: 60px; /* הקטנה */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* אם רוצים שהלוגו עצמו יגדל מעט בנפרד - אפשר להוסיף */
+.logo-container:hover .logo-img {
+  transform: scale(1.05);
+}
+
+.profile-container {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  margin-left: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 1.5px solid #ff7000;
+  transition: box-shadow 0.2s;
+}
+
+.profile-container:hover {
+  box-shadow: 0 4px 16px rgba(255,112,0,0.18);
+  background: rgba(255,255,255,0.28);
+}
+
+.profile-container {
+  width: 64px;
+  height: 64px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  margin-left: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 1.5px solid #ff7000;
+  transition: box-shadow 0.2s;
+  overflow: hidden;
+}
+.profile-container:hover {
+  box-shadow: 0 4px 16px rgba(255,112,0,0.18);
+  background: rgba(255,255,255,0.28);
+}
+.profile-avatar-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff7000;
+  background: #fff;
+}
+.profile-avatar-initial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff7000;
+  background: #fff3e0;
+  border: 2px solid #ff7000;
+  box-shadow: 0 1px 4px rgba(255,112,0,0.08);
+}

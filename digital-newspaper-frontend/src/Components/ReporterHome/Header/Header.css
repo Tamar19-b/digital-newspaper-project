@@ -1,0 +1,44 @@
+/* @import './ReporterHome.css'; */
+@import '../ReporterHome.css';
+
+/* Header styles */
+.dashboard-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 120px;
+  background-image: url('../../../assets/bac1.png');
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 25px;
+  z-index: 10;
+  box-sizing: border-box;
+}
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.dashboard-title {
+  color: white;
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0 18px;
+  font-family: 'Heebo', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+.dashboard-logo {
+  height: 110px;
+  margin-left: 40px;
+  max-width: 300px;
+  object-fit: contain;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

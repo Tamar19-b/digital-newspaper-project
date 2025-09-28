@@ -1,0 +1,169 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 11, 38, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.custom-modal-content {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  width: 90%;
+  max-width: 800px;
+  direction: rtl;
+  text-align: right;
+  box-shadow: 0 8px 32px rgba(0, 11, 38, 0.2);
+  animation: fadeInUp 0.4s ease;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-modal-content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(0, 11, 38);
+  border-bottom: 2px solid rgb(231, 147, 13);
+  padding-bottom: 0.5rem;
+}
+
+.custom-modal-content label {
+    display: block;
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(0 0 0);
+}
+.custom-modal-content input,
+.custom-modal-content textarea,
+.custom-modal-content select {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.custom-modal-content input:focus,
+.custom-modal-content textarea:focus,
+.custom-modal-content select:focus {
+  border-color: rgb(231, 147, 13);
+  box-shadow: 0 0 6px rgba(231, 147, 13, 0.6);
+  background-color: #fff;
+  outline: none;
+  transform: scale(1.02);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.preview-img {
+  display: block;
+  margin-top: 0.5rem;
+  max-width: 100%;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 12px rgba(0, 11, 38, 0.15);
+}
+
+/* כפתור העלאת תמונה */
+.upload-wrapper {
+  margin-top: 0.8rem;
+}
+
+.upload-wrapper input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    background: rgb(240 240 240);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  background: rgb(231, 147, 13);
+  transform: scale(1.05);
+}
+
+/* שדות מזהים */
+.input-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.short-input {
+  flex: 1;
+  min-width: 180px;
+}
+
+.modal-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal-buttons button {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.modal-buttons button:not(.cancel) {
+  background-color: rgb(0, 11, 38);
+  color: white;
+}
+
+.modal-buttons button:not(.cancel):hover {
+  background-color: rgb(231, 147, 13);
+  transform: translateY(-2px);
+}
+
+.modal-buttons .cancel {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-buttons .cancel:hover {
+  background-color: #5a6268;
+}
+
+.readonly-field {
+  background-color: #f0f0f0;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  margin-bottom: 0.6rem;
+  white-space: pre-wrap;
+}

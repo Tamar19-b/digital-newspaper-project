@@ -1,0 +1,150 @@
+.propil-upload-btn {
+  background: #fff7e6;
+  color: #ff7000;
+  border: 1.5px solid #ffb84d;
+  border-radius: 16px;
+  padding: 0.3rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.propil-upload-btn:hover {
+  background: #ffe0b2;
+  color: #d35400;
+}
+/* סרגל צד לפרופיל */
+.propil-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 290px;
+  background: #fff;
+  box-shadow: 2px 0 16px rgba(0,0,0,0.13);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  animation: slideInPropil 0.3s;
+}
+
+@keyframes slideInPropil {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.propil-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #ff7000;
+  margin: 0.5rem 1rem 0 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.propil-close:hover {
+  color: #d35400;
+}
+
+.propil-content {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.propil-avatar {
+  width: 70px;
+  height: 70px;
+  background: #fff3e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin: 1rem auto 1.5rem auto;
+  border: 2.5px solid #ff7000;
+  box-shadow: 0 2px 8px rgba(255,112,0,0.10);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.propil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.propil-avatar-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.propil-avatar-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff7000;
+  margin-bottom: 0.5rem;
+}
+
+.propil-input {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border-radius: 18px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.propil-save-btn {
+  background: #ff7000;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 0.6rem 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+.propil-save-btn:hover {
+  background: #e55d00;
+}
+.favorites-section {
+  margin-top: 30px;
+}
+
+.favorites-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.favorite-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f7;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.remove-favorite-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: red;
+}

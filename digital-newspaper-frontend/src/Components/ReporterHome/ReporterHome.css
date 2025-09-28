@@ -1,0 +1,30 @@
+/* === משתני עיצוב כלליים ======================== */
+:root {
+  --clr-bg-card: #fff;
+  --clr-bg-page: #f5f7fb;
+  --clr-border: #e4e8f0;
+  --clr-text-main: #212529;
+  --clr-text-muted: #6c757d;
+  --radius-lg: 1rem;
+  --radius-md: .75rem;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.12);
+}
+
+.reporter-container {
+  direction: rtl;
+  font-family: 'Segoe UI', sans-serif;
+  background-size: cover;
+  padding-top: 140px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+  background-color: #f5f7fb;
+}
+
+.section-title {
+  font-size: 24px;
+  margin: 30px 40px 15px;
+  color: #444;
+}
+
+/* נשארו רק חוקים כלליים ולקונטיינר הראשי */

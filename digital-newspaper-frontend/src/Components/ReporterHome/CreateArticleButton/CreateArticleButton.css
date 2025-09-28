@@ -1,0 +1,17 @@
+@import '../ReporterHome.css';
+/* CreateArticleButton styles */
+.create-article-button {
+  padding: 6px 16px;
+  font-size: 16px;
+  background: linear-gradient(45deg, #ffa500, #ffcc00, #ffaa00);
+  background-size: 200% auto;
+  color: white;
+  border-radius: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  width: auto;
+  margin: 0 0 0 10px;
+  transition: background-position 0.4s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
